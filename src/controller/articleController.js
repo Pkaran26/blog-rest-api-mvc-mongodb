@@ -18,7 +18,7 @@ const createArticle = (req, res)=>{
 }
 
 const getArticle = (req, res)=>{
-  article.find({}, (err, articles)=>{
+  articleModel.find({}, (err, articles)=>{
     if(err){
       res.send(err)
     }else {
@@ -28,7 +28,7 @@ const getArticle = (req, res)=>{
 }
 
 const getOneArticle = (req, res)=>{
-  article.findById((req.params.id), (err, article)=>{
+  articleModel.findById((req.params.id), (err, article)=>{
     if(err){
       res.send(err)
     }else {
