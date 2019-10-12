@@ -6,6 +6,7 @@ var ArticleSchema = ({
   body: String,
   author: {
     type: schema.Types.ObjectId,
+    required: [true, 'author is required'],
     ref: 'user'
   },
   createdAt: {
